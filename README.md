@@ -13,7 +13,7 @@ Ideal for applications requiring <mark>robust Redis functionalities</mark> and <
 ## Architecture of the Project
 
  ### 1-src folder
-   - Configration
+   - Configuration
    - Features
      
 ### 2-Maven pom.xml
@@ -76,7 +76,7 @@ Ideal for applications requiring <mark>robust Redis functionalities</mark> and <
 
 <br>
 
-##### :pencil2: `Initializes RLocalCachedMap named "cacheMap" is created with a JSON codec (TypedJsonJacksonCodec) for serialization of Integer keys and String values. cachedMapStrategies defines the caching strategies used. testLocalCacheMap1 will adds two entries  key 1 with "cachemap1" and  key 2 with "cacheMap2" to the local cached map. testLocalCacheMap2 will update  a single entry  key1 with "cacheMap1" to the local cached map.` 
+##### :pencil2: `Initializes RLocalCachedMap named "cacheMap" is created with a JSON codec TypedJsonJacksonCodec for serialization of Integer keys and String values. cachedMapStrategies defines the caching strategies used. testLocalCacheMap1 will adds two entries key 1 with "cachemap1" and key 2 with "cacheMap2" to the local cached map. testLocalCacheMap2 will update a single entry key1 with "cacheMap1" to the local cached map.` 
 
 ###### Code :computer:
 
@@ -119,7 +119,7 @@ Ideal for applications requiring <mark>robust Redis functionalities</mark> and <
 
 <br>
 
-##### :pencil2: `Initializes RListReactive named "number" is created with a LongCodec for serialization of Long values. list of long numbers from 1 to 10 is created and boxed them as list collect so to send it the same time to be same order. The list.addAll(numbersList).then() operation adds all these numbers to the Redis list. The step verifier is used to ensure this operation completes successfully and verifying size.` 
+##### :pencil2: `Initializes RListReactive named "number" is created with a LongCodec for serialization of long values. list of long numbers from 1 to 10 is created and boxed them as list collect so to send it the same time to be same order. The list.addAll(numbersList).then() operation adds all these numbers to the Redis list. The step verifier is used to ensure this operation completes successfully and verifying size.` 
 
 ###### Code :computer:
 
@@ -156,7 +156,7 @@ Ideal for applications requiring <mark>robust Redis functionalities</mark> and <
 
 <br>
 
-##### :pencil2: `Initializes RQueueReactive named "number" is created with a LongCodec for serialization of long values.The method polls items from the queue using queue.poll(), repeating the operation 3 times. Step verifier ensures that the polling operation completes successfully. Additionally, it verifies that the size of the queue is 6 after the polling operations, confirming that the expected number of elements is present.` 
+##### :pencil2: `Initializes RQueueReactive named "number" is created with a LongCodec for serialization of long values. The method polls items from the queue using queue.poll(), repeating the operation 3 times. Step verifier ensures that the polling operation completes successfully. Additionally, it verifies that the size of the queue is 6 after the polling operations, confirming that the expected number of elements is present.` 
 
 ###### Code :computer:
 
@@ -187,7 +187,7 @@ Ideal for applications requiring <mark>robust Redis functionalities</mark> and <
 
 <br>
 
-##### :pencil2: `Initializes RDequeReactive named "number" is created with a LongCodec for serialization of long values.The method performs a pollLast() operation to remove  items from the end of the stack, repeating this operation 3 times.Step verifier ensures that the polling operation completes successfully. It also verifies that the size of the stack is 2 after the polling operations, confirming the remaining number of elements in the stack.` 
+##### :pencil2: `Initializes RDequeReactive named "number" is created with a LongCodec for serialization of long values. The method performs a pollLast() operation to remove  items from the end of the stack, repeating this operation 3 times. Step verifier ensures that the polling operation completes successfully. It also verifies that the size of the stack is 2 after the polling operations, confirming the remaining number of elements in the stack.` 
 
 ###### Code :computer:
 
@@ -218,8 +218,7 @@ Ideal for applications requiring <mark>robust Redis functionalities</mark> and <
 
 <br>
 
-##### :pencil2: `Initializes RScoredSortedSetReactive named "name:score" is created with a StringCodec for serialization of string values and scores. The method adds three entries to the sorted set with associated scores: "Sam" with a score of 1.0, "Mike" with a score of 2.5, and "Jake" with a score of 0.5. Step verifier is used to ensure the completion of the score addition. Afterward, the sorted set entries are retrieved in a specified range from rank 0 to 1. 
-` 
+##### :pencil2: `Initializes RScoredSortedSetReactive named "name:score" is created with a StringCodec for serialization of string values and scores. The method adds three entries to the sorted set with associated scores: "Sam" with a score of 1.0, "Mike" with a score of 2.5, and "Jake" with a score of 0.5. Step verifier is used to ensure the completion of the score addition. Afterward, the sorted set entries are retrieved in a specified range from rank 0 to 1.` 
 
 ###### Code :computer:
 
@@ -244,7 +243,7 @@ Ideal for applications requiring <mark>robust Redis functionalities</mark> and <
 
 <br>
 
-###### Result :star_struck: As you can see Jake is priority than Sam, if you restart will be the score of Jake is priority than Sam
+###### Result :star_struck: As you can see Jake is priority than Sam, if you restart will be the score of Jake is priority than Sam.
 
 <br>
 
@@ -255,7 +254,7 @@ Ideal for applications requiring <mark>robust Redis functionalities</mark> and <
 
 <br>
 
-##### :pencil2: `Producer adds messages to the message queue. It generates a sequence of numbers from 1 to 20, with a delay of 500 milliseconds between each numbe. Consumer1 and consumer2  will listents  to a message queue to consume messages then print it.` 
+##### :pencil2: `Producer adds messages to the message queue. It generates a sequence of numbers from 1 to 20, with a delay of 500 milliseconds between each numbe. Consumer1 and consumer2 will listents to a message queue to consume messages then print it.` 
 
 ###### Code :computer:
 
